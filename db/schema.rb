@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_30_095322) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_08_103630) do
   create_table "brands", force: :cascade do |t|
     t.string "title"
     t.string "bytitle"
@@ -35,6 +35,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_30_095322) do
     t.integer "hit", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "related_products", force: :cascade do |t|
+    t.integer "product_id"
+    t.integer "related_id"
   end
 
 end

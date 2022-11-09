@@ -1,5 +1,7 @@
 FactoryBot.define do
   factory name :product do
+    association name :category, factory: :category
+
     brand_id { rand(1..5) }
     title { Faker::Lorem.word.camelcase }
     bytitle { title.downcase }

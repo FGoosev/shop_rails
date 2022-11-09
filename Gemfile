@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.0'
+
+gem 'ancestry'
 gem 'activestorage'
 gem 'meta-tags'
 gem 'breadcrumbs_on_rails'
